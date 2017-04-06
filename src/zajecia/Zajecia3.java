@@ -7,27 +7,47 @@ import java.util.Scanner;
  */
 public class Zajecia3 {
     public static void main(String[] args) {
-        int a = 0;
-        int b = 0;
+        double a = 0;
+        double b = 0;
         int c = 0;
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Insert first number");
-        a = scanner.nextInt();
-        System.out.println("Insert second number");
-        b = scanner.nextInt();
-        System.out.println("Insert third number");
-        c = scanner.nextInt();
+        System.out.println("Insert your weight");
+        a = scanner.nextDouble();
+        System.out.println("Insert your height [meters]");
+        b = scanner.nextDouble();
 
 
+        //System.out.println("Insert third number");
+      //  c = scanner.nextInt();
 
-        farenheitToCelsius(80);
-        farenheitToCelsius(100);
 
-        celsiusToFarenheit(25);
-        minMax(a, b,c );
+        //farenheitToCelsius(80);
+        //farenheitToCelsius(100);
 
+        //celsiusToFarenheit(25);
+        //minMax(a, b,c );
+        bmi(a,b);
     }
+     public static void bmi(double weight, double height) {
+         double bmi = ((weight) / (height * height));
+
+         System.out.println("Twoje bmi to: " + bmi);
+
+         if (bmi < 18.5) {
+
+             System.out.println("PRZYTYJ!");
+         } else if (bmi >= 18.5 && bmi <= 24.9) {
+
+             System.out.println("jest OK!");
+         } else if (bmi > 24.9)   {
+
+             System.out.println("ZA GRUBO!");
+         }
+     }
+
+
+
     public static void farenheitToCelsius(int farenheit) {
 
         double celsius = (farenheit - 32) / 1.8;
