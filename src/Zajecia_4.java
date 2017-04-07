@@ -24,13 +24,17 @@ public class Zajecia_4 {
         double abs = abs(-8);
 
         double span = span(array);
-       statistic(array);
-        revers(array);
+       // statistic(array);
+       // revers(array);
+        //getArrayFromUser();
+        PublicArray(getArrayFromUser());
+
     }
-    public static void statistic (int[] array) {
+
+    public static void statistic(int[] array) {
         System.out.println("Min from array " + minFromArray(array));
         System.out.println("Max from array " + maxFromArray(array));
-        System.out.println("Sum "+ sum(array));
+        System.out.println("Sum " + sum(array));
         System.out.println("Avg " + avg(array));
         System.out.println("Span of array " + span(array));
 
@@ -38,16 +42,36 @@ public class Zajecia_4 {
 
     public static void revers(int[] array) {
         System.out.print("[ ");
-        for (int i = array.length -1; i>=0; i-- ) {
+        for (int i = array.length - 1; i >= 0; i--) {
 
             System.out.print(array[i]);
             if (i != 0) {
                 System.out.print(", ");
             }
         }
-            System.out.print(" ]");
+        System.out.print(" ]");
 
     }
+
+    public static int[] getArrayFromUser() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Insert array size: ");
+        int size = scanner.nextInt();
+        int[] array = new int[size];
+        for (int  i = 0; i < size ; i++) {
+            System.out.println("Insert next number. " );
+            array[i] = scanner.nextInt();;
+
+        }
+         return array;
+    }
+    public static void PublicArray(int [] array){
+
+       for( int i = 0; i < array.length; i++)
+           System.out.print(array[i] + ", ");
+    }
+
 
 
 
