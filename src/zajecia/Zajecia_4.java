@@ -1,3 +1,5 @@
+package zajecia;
+
 import java.util.Scanner;
 
 /**
@@ -24,10 +26,13 @@ public class Zajecia_4 {
         double abs = abs(-8);
 
         double span = span(array);
-       // statistic(array);
-       // revers(array);
+        // statistic(array);
+        // revers(array);
         //getArrayFromUser();
         PublicArray(getArrayFromUser());
+        reverseArray(array);
+        displayReversed(array);
+
 
     }
 
@@ -39,6 +44,21 @@ public class Zajecia_4 {
         System.out.println("Span of array " + span(array));
 
     }
+
+    public static int[] reverseArray(int[] array) {
+        int[] newArray = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            newArray[i] = array[array.length - i - 1];
+            // newArray[array.length - i -1] = array[i];
+
+        }
+        return newArray;
+    }
+
+    public static void displayReversed(int[] array) {
+        PublicArray(reverseArray(array));
+    }
+
 
     public static void revers(int[] array) {
         System.out.print("[ ");
@@ -59,13 +79,23 @@ public class Zajecia_4 {
         System.out.println("Insert array size: ");
         int size = scanner.nextInt();
         int[] array = new int[size];
-        for (int  i = 0; i < size ; i++) {
-            System.out.println("Insert next number. " );
-            array[i] = scanner.nextInt();;
+        for (int i = 0; i < size; i++) {
+            System.out.println("Insert next number. ");
+            array[i] = scanner.nextInt();
+
 
         }
-         return array;
+        return array;
     }
+
+    public static void displayNewArray() {
+        int[] reverseNewArray = getArrayFromUser();
+
+        displayReversed(getArrayFromUser());
+    }
+
+
+
     public static void PublicArray(int [] array) {
         System.out.print("[ ");
         for (int i = 0; i < array.length; i++){
