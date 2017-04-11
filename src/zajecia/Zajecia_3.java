@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by RENT on 2017-04-06.
  */
-public class Zajecia3 {
+public class Zajecia_3 {
     public static void main(String[] args) {
         double a = 0;
         double b = 0;
