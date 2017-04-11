@@ -8,8 +8,10 @@ import java.util.Scanner;
  */
 public class Zajecia_5 {
     public static void main(String[] args) {
-       tree(5);
-        printEmptySpace(5);
+        homework();
+        lineOfNumbers(20);
+        // tree(5);
+        //printEmptySpace(5);
         //  printOnesMatrix(5);
         // printOneMatrix(5);
         //printMatrixOfNumbers(4);
@@ -164,6 +166,7 @@ public class Zajecia_5 {
         }
 
     }
+
     // konar (liczba spacji) a-1
     //narysować korzeń --> zdanie domowe
     public static void tree(int a) {
@@ -172,10 +175,40 @@ public class Zajecia_5 {
                 System.out.print("  ");
 
             }
-            for (int j = 0; j <2*i+1 ; j++) {
+            for (int j = 0; j < 2 * i + 1; j++) {
                 System.out.print("* ");
             }
             System.out.println();
+        }
+        for (int i = 0; i < a; i++) {
+            for (int j = 0; j < a - 1; j++) {
+                System.out.print("  ");
+            }
+            System.out.println("*");
+        }
+    }
+
+    public static void homework() {
+        //losujemy liczbe z przedzialu 15-25
+        //wywolac metode getArray()
+        // uzyc wygenerowanej tablicy w metodzie statistics
+        // dla wylosowanej liczby -12 wywolali metode tree
+        Random random = new Random();
+        System.out.println(random.nextInt());
+
+        int number = random.nextInt(10) + 15;
+        Zajecia_4.statistic(getArray(number));
+        tree(number - 12);
+        System.out.println();
+
+    }
+
+    public static void lineOfNumbers(int value) {
+        for (int i = 0; i < value; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("  ");
+            }
+            System.out.println(i+1);
         }
 
     }
