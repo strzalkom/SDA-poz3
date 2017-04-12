@@ -10,7 +10,7 @@ public class Zajecia_6 {
     public static void main(String[] args) {
         int[] numberAsArray= numberToArray(157);
         System.out.println(arrayToNumber(numberAsArray));
-        
+
 
         Zajecia_4.PublicArray(numberToArray(357));
         //System.out.println(sumOfRandom(150));
