@@ -8,8 +8,16 @@ import java.util.Scanner;
  */
 public class Zajecia_6 {
     public static void main(String[] args) {
-        System.out.println("3 "+ numberOfDigits(357));
-        System.out.println("1 " + numberOfDigits(0));
+        int[] numberAsArray= numberToArray(157);
+        System.out.println(arrayToNumber(numberAsArray));
+        
+
+        Zajecia_4.PublicArray(numberToArray(357));
+        //System.out.println(sumOfRandom(150));
+        //System.out.println(sumOfRandom(150));
+        //System.out.println("15 " + sumOfDigits(357));
+        // System.out.println("3 "+ numberOfDigits(357));
+        // System.out.println("1 " + numberOfDigits(0));
         //   Scanner scanner = new Scanner(System.in);
         //  System.out.println("Insert number: ");
         //    int number = scanner.nextInt();
@@ -17,9 +25,9 @@ public class Zajecia_6 {
         //   whileTest();
         //sumUntil();
         //  avgUntill();
-        Random random = new Random();
-        // int result = game(random.nextInt(100));
-        // System.out.println("You finished in " + result + " steps.");
+        //Random random = new Random();
+        //int result = game(random.nextInt(100));
+        //System.out.println("You finished in " + result + " steps.");
     }
 
     public static void whileTest() {
@@ -91,19 +99,67 @@ public class Zajecia_6 {
     public static int numberOfDigits(int number) {
 
         int counter = 1;
-        while (number/ 10 > 1) {
+        while (number / 10 > 1) {
             number /= 10;
             counter++;
         }
         return counter;
     }
 
-   // public static int sumOfDigits(int number) {
-    //    Scanner scanner = new Scanner(System.in);
-    //    int sum = 0;
-    //    int digit = 0;
+    // public static int bot
 
+
+    public static int sumOfDigits(int number) {
+        int sum = 0;
+        while (number > 0) {
+            sum += number % 10;
+            number /= 10;
+        }
+        return sum;
     }
+
+    public static int sumOfRandom(int value) {
+        Random random = new Random();
+        int sum = 0;
+        int i = 0;
+        while (sum < value) {
+            sum += random.nextInt(30 - 10);
+            i++;
+        }
+        return i;
+    }
+
+    public static int[] numberToArray(int number) {
+
+
+        int size = numberOfDigits(number);
+        int[] array = new int[size];
+        int i = 0;
+        while (i < array.length) {
+            array[array.length - i - 1] = number % 10;
+            number /= 10;
+
+            i++;
+        }
+        return array;
+    }
+    public static int arrayToNumber(int[] array) {
+        int sum = 0;
+        int valueToMultiply = 1;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[array.length - i - 1] * valueToMultiply;
+            valueToMultiply *= 10;
+
+        }
+
+    return sum;
+    }
+}
+
+
+
+
+
 
 
 
