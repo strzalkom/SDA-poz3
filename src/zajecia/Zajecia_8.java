@@ -112,7 +112,46 @@ public class Zajecia_8 {
         return String.valueOf(charArray);
 
     }
-    
 
+    public static boolean startsWith(String message, String someValue) {
+        char[] messageCharacters = message.toCharArray();
+        char[] someValueCharacters = someValue.toCharArray();
+        boolean flag = true;
+        int i = 0;
+        while (flag && i < someValueCharacters.length) {
+            if (someValueCharacters[i] != messageCharacters[i]) {
+                flag = false;
+            }
+//            flag = !(someValueCharacters[i] != messageCharacters[i]);
+            i++;
+        }
+        return flag;
+    }
+
+    public static String toUpperCase(String message) {
+        char[] charArray = message.toCharArray();
+        if (charArray[0] >= 97 && charArray[0] <= 122) {
+            charArray[0] = (char)(charArray[0] -32);
+        }
+
+//  charArray[0] -= (charArray[0] >= 97 && charArray[0] <= 122) ? 32:0;
+        return String.valueOf(charArray);
+    }
+    public static String toLowerCase(String message) {
+        char[] charArray = message.toCharArray();
+        if (charArray[0] >= 122 && charArray[0] <= 97) {
+            charArray[0] = (char)(charArray[0] +32);
+        }
+        return String.valueOf(charArray);
+    }
+     public static int sumOfNumbers(String message) {
+         char[] charArray = message.toCharArray();
+         int sum = 0;
+         for (int i = 0; i < charArray.length; i++){
+             if (charArray[i] > 48 && charArray[i] <=57) {
+                 sum += charArray[i] - 48;
+             }
+         }
+     return sum;
+     }
 }
-
