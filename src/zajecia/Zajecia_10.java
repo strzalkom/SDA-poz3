@@ -14,11 +14,15 @@ public class Zajecia_10 {
 //        System.out.println(find("Ala ma kota", 'a'));
 ////       Zajecia_4.displayNewArray(stringStatistics("abbbbbbcccccdddzzz"));
 //       int [] statistics = stringStatistics("Ala ma kota ");
-//        int[] array = {1,2,3,4,5,6,7,8};
+//        int[] array = {1,2,3,4,5,6,7,8};A
 
 //        System.out.println(multiplyDigits(34));
 //        System.out.println(multiplyDigits(123));
-int[][] ints = randomMatrix(3,10,5);
+        System.out.println(find("Ala ma kota", "ma"));
+        System.out.println(checkRoundBraces("((2+2)*2)"));
+
+
+//int[][] ints = randomMatrix(3,10,5);
     }
 
 
@@ -112,6 +116,48 @@ int[][] ints = randomMatrix(3,10,5);
 
     }
 
+    public static int find(String message, String sentence) {
+        char[] messageArray = message.toCharArray();
+        char[] sentenceArray = sentence.toCharArray();
+        boolean flag = true;
+        int i = 0;
+        while (flag && i <= messageArray.length - sentenceArray.length) {
+            int j = 0;
+            while (j < sentenceArray.length && messageArray[i + j] == sentenceArray[j]) {
+                j++;
+                if (j == sentenceArray.length) {
+                    flag = false;
+                }
+            }
+            i++;
+        }
+        return flag ? -1 : i - 1;
+    }
+
+    public static int countAll(String message, String sentence) {
+        int counter = 0;
+        while (find(message, sentence) != -1) {
+            counter++;
+            message = message.substring((find(message, sentence)));
+
+        }
+        return counter;
 
 
+    }
+
+    public static boolean checkRoundBraces(String expression) {
+        char[] expressionArray = expression.toCharArray();
+        int counter = 0;
+        int i = 0;
+        while (counter >= 0 && i < expressionArray.length) {
+            if (expressionArray[i] == '(') {
+                counter++;
+            }
+            i++;
+        }
+        return counter == 0;
+
+
+    }
 }
