@@ -9,7 +9,7 @@ public class Zajecia_9 {
     public static void main(String[] args) {
         System.out.println(cezarCode("WOJNA",1));
         System.out.println(cezarCode("Ala Ma Kota I 2 Psy",2));
-     
+
     }
 public static String cezarCode(String messageToCode, int offset) {
 
