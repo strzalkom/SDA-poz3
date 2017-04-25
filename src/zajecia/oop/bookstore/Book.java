@@ -29,7 +29,9 @@ public String title;
         this.author = author;
         this.relaseDate = relaseDate;
         this.ISBN = ISBN;
-
-
+        this.description = "Ti be update";
     }
+
+
+
 }
