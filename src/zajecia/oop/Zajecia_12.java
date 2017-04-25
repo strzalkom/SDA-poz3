@@ -13,7 +13,7 @@ public class Zajecia_12 {
         user.firstName = "Andrzej";
         user.lastName = "Nowak";
         user.phoneNumber = "897384723";
-        user.address = "Poznan, ul. Druga 24";
+
         user.age = 50;
 
 
@@ -22,7 +22,7 @@ public class Zajecia_12 {
         user2.firstName = "Wojciech";
         user2.lastName = "Kowalski";
         user2.phoneNumber = "341231223";
-        user2.address = "Poznan, ul. Pierwsza 1";
+
         user2.age = 30;
 
 

@@ -31,14 +31,16 @@ public class Zajecia_11 {
     }
 
 
-        public static int[] readIntegersFromFile (File file) throws FileNotFoundException {
-            File file2 = new File("C:\\Users\\RENT\\IdeaProjects\\projekt\\SDA-poz3\\src\\zajecia\\Cwiczenie1");
-            Scanner scanner = new Scanner(file2);
-            while (scanner.hasNext()) {
-                System.out.println(scanner.nextLine());
-            }
+    public static int[] readIntegersFromFile(File file) throws FileNotFoundException {
+        File file2 = new File("C:\\Users\\RENT\\IdeaProjects\\projekt\\SDA-poz3\\src\\zajecia\\Cwiczenie1");
+        Scanner scanner = new Scanner(file2);
+        while (scanner.hasNext()) {
+            System.out.println(scanner.nextLine());
         }
-    
+        return new int[0];
+    }
+
+
 
 
 public static int getLength(File file) throws FileNotFoundException {
