@@ -21,17 +21,12 @@ public class MockResultsRepository {
     //ZADANIE DOMOWE
     //Napisac metode, podmienic w wyswietlaniu wynikow, i poprawic wyswietlanie wynikow
     public Result[] getTopResults(int n) {
-       Result[] resultToReturn(int n) {
-            Result[] resultsToReturn = new Result[n];
-            int loopSize =n < results.length ? n : results.length;
-            for (int i = 0; i < loopSize; i++) {
-                resultsToReturn[i] = results[i];
-            }
-       return resultsToReturn;
-
-       }
-
-        return null;
+        Result[] resultsToReturn = new Result[n];
+        int loopSize = n < results.length ? n : results.length;
+        for (int i = 0; i < loopSize; i++) {
+            resultsToReturn[i] = results[i];
+        }
+        return resultsToReturn;
     }
 
 }

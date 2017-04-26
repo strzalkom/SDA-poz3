@@ -41,6 +41,7 @@ public class Quiz {
         }else {
                 System.out.println("End of game");
             }
+       quizInterface.afterGameEnded();
         }
 
     }

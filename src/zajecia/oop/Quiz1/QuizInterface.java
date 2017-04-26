@@ -63,20 +63,25 @@ public class QuizInterface {
     public void showResults(Result[] results) {
         System.out.println("Hall of fame:");
         for (int i = 0; i < results.length; i++) {
-            System.out.println((i + 1) + ". " +
+            System.out.println((i + 1) + ".\t" +
                     results[i].getPlayerName() + "\t" + results[i].getResult());
         }
         scanner.nextLine();
     }
-   public void showTopResults(Result[] topResults) {
-       System.out.println("Hall of fame:");
-       for (int i = 0; i < topResults.length; i++) {
-           System.out.print((i+1)+".\t");
-           if (topResults[i] != null) {
-             System.out.print((i+1)+ ". " + topResults[i].getPlayernName() + "\t" + topResults[i].getResult());
-         }
-       }
-   }
+
+    public void showTopResults(Result[] topResults) {
+        System.out.println("Hall of fame:");
+        for (int i = 0; i < topResults.length; i++) {
+            System.out.print((i + 1) + ".\t");
+            if (topResults[i] != null) {
+                System.out.print(topResults[i].getPlayerName() + "\t" + topResults[i].getResult());
+            }
+            System.out.println();
+        }
+    }
+    public void afterGameEnded() {
+        System.out.println("Game ended.");
+    }
 
 
 
