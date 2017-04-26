@@ -3,6 +3,7 @@ package zajecia.oop.Quiz1;
 import zajecia.oop.Quiz1.question.MockQuestionsRepository;
 import zajecia.oop.Quiz1.question.Question;
 import zajecia.oop.Quiz1.result.MockResultsRepository;
+import zajecia.oop.Quiz1.result.Result;
 
 /**
  * Created by RENT on 2017-04-25.
@@ -39,9 +40,12 @@ public class Quiz {
                         }
 
                     }
-                    quizInterface.showResult(playerName, correctAnswerCounter);
+                   Result result = new Result(playerName, correctAnswerCounter);
+                    quizInterface.showResult(result);
+                   resultsRepository.add(result);
+
                     break;
-                case 4:
+                case 2:
 
                     quizInterface.showTopResults(resultsRepository.getTopResults(10));
                     break;
