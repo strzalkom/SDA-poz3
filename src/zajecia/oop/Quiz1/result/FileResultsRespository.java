@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * Created by RENT on 2017-04-26.
  */
-public class FileResultsRespository {
+public class FileResultsRespository implements ResultsRepository{
 
 
     private String pathToFile;
@@ -57,49 +57,29 @@ public class FileResultsRespository {
 
     }
     public Result[] getTopResults(int n) {
-        try {
-            Scanner scanner = new Scanner (fileWithResults);
-        } catch (FileNotFoundException e1) {
-            e1.printStackTrace();
-        }
-
         Result[] resultsToReturn = new Result[n];
-        int loopSize = n < getSize() ? n : getSize();
-        for (int i = 0; i < loopSize; i++) {
-            resultsToReturn[i] = mapToResult();
+        try {
+            Scanner scanner = new Scanner(fileWithResults);
+            int loopSize = n < getSize() ? n : getSize();
+            for (int i = 0; i < loopSize; i++) {
+                resultsToReturn[i] = mapToResult(scanner.nextLine());
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
         return resultsToReturn;
     }
 
-
-
-
-
-
     public void add(Result result) {
-
-            try (FileWriter fw = new FileWriter(fileWithResults, true) {
-
-            BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter out = new PrintWriter(bw))
-
-                {
-                    out.println(result.toString());
-
-
-                }
-            }
-
+        try (FileWriter fw = new FileWriter(fileWithResults, true);
+             BufferedWriter bw = new BufferedWriter(fw);
+             PrintWriter out = new PrintWriter(bw)) {
+            out.println(result.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        }
     }
 }
-
-
-
-
 
 
 
