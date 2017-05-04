@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="757a2b19-54c2-4948-97ae-7f7b87833d4c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Zajecia_1/Zajecia_4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Zajecia_1/zajecia/Poprawka_zajecia4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Zajecia_1/zajecia/Zajecia_4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Zajecia_1/zajecia/Zajecia_5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Zajecia_1/zajecia/bomba.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Zajecia_4.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SDA-poz3.iml" afterPath="$PROJECT_DIR$/SDA-poz3.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zajecia_1.iml" afterPath="$PROJECT_DIR$/Zajecia_1.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zajecia/Hello_World.java" afterPath="$PROJECT_DIR$/src/zajecia/Hello_World.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zajecia/Kalkulator.java" afterPath="$PROJECT_DIR$/src/zajecia/Kalkulator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zajecia/Poprawka_zajecia4.java" afterPath="$PROJECT_DIR$/src/zajecia/Poprawka_zajecia4.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zajecia/ZadaniaZeScannerem.java" afterPath="$PROJECT_DIR$/src/zajecia/ZadaniaZeScannerem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zajecia/Zajecia3.java" afterPath="$PROJECT_DIR$/src/zajecia/Zajecia3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zajecia/Zajecia_4.java" afterPath="$PROJECT_DIR$/src/zajecia/Zajecia_4.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zajecia/Zajecia_5.java" afterPath="$PROJECT_DIR$/src/zajecia/Zajecia_5.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zajecia/bomba.java" afterPath="$PROJECT_DIR$/src/zajecia/bomba.java" />
-    </list>
+    <list default="true" id="757a2b19-54c2-4948-97ae-7f7b87833d4c" name="Default" comment="" />
     <ignored path="Zajecia_1.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
